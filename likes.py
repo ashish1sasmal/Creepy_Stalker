@@ -14,12 +14,14 @@ elem = browser.find_element_by_name('pass')
 
 elem.send_keys(os.environ['FB_PASS'])
 
-# h=['2','b','4']
-# for i in h:
-# 		elem = browser.find_element_by_xpath('//*[@id="u_0_'+i+'"]')
-# 		elem.click()
+h=['2','b','4']
+for i in h:
+    try:
+        elem = browser.find_element_by_xpath('//*[@id="u_0_'+i+'"]')
+        elem.click()
+    except:
+         print("try")
 
-elem = browser.find_element_by_xpath('//*[@id="u_0_b"]')
-elem.click()
 
-#it worked!!
+
+#it worked!! UN-CRASHABLE
