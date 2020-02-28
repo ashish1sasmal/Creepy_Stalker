@@ -22,4 +22,4 @@ elem.send_keys(os.environ['FB_PASS'])
 elem = browser.find_element_by_xpath('//*[@id="u_0_b"]')
 elem.click()
 
-#it worked!
+#it worked!!
