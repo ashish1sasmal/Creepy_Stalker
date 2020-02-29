@@ -28,10 +28,18 @@ print(elem)
 link = elem.get_attribute('href')
 
 browser.get(link)
+l=[]
+elem = browser.find_elements_by_xpath('//*[@id="reaction_profile_browser1"]')
+#elem =browser.find_elements_by_class_name('_5j0e fsl fwb fcb')
 
-elem = browser.find_element_by_xpath('//*[@id="js_0"]/ul')
-print(elem.text)
-
+for i in elem:
+    p = i.find_elements_by_css_selector('a')
+    for j in p:
+        print(j.text)
+    # t=i.text
+    # print(t)
+    # if t=="Add Friend":
+    #     break
 
 
 #it worked!! UN-CRASHABLE
