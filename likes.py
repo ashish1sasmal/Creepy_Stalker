@@ -21,6 +21,16 @@ for i in h:
         elem.click()
     except:
          print("try")
+browser.get('https://www.facebook.com/NASA/photos/a.67899501771/10157957295556772/?type=3&theater')
+
+elem = browser.find_element_by_class_name('_3dlf')
+print(elem)
+link = elem.get_attribute('href')
+
+browser.get(link)
+
+elem = browser.find_element_by_xpath('//*[@id="js_0"]/ul')
+print(elem.text)
 
 
 
